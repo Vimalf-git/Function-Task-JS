@@ -13,8 +13,8 @@ console.log("---------STRING TITTLE CAPITAL--------")
  * @returns StringValue
  */
 function changeTittleCaps(val){
-    let sep=val.split(" ");
-    for(let i=0;i<sep.length;i++){
+  let sep=val.toLowerCase().split(" ");
+  for(let i=0;i<sep.length;i++){
       sep[i]= sep[i].charAt(0).toUpperCase() +sep[i].slice(1);        
     }
     return sep.join(" ");
@@ -36,13 +36,13 @@ console.log("Traditional functional--->"+" "+traditionalVal);
 
 var AnonyChangeTittleCaps = function (val) {
     
-    let sep=val.split(" ");
-    for(let i=0;i<sep.length;i++){
+  let sep=val.toLowerCase().split(" ");
+  for(let i=0;i<sep.length;i++){
       sep[i]= sep[i].charAt(0).toUpperCase() +sep[i].slice(1);        
     }
     return sep.join(" ");
 };
-let anonymousWay=AnonyChangeTittleCaps("hi how are you ");
+let anonymousWay=AnonyChangeTittleCaps("hi hOw are you ");
 console.log("Anonymous Function--->"+" "+anonymousWay);
 
 //ArrowFunction-(Es6)
@@ -59,13 +59,13 @@ console.log("Anonymous Function--->"+" "+anonymousWay);
 
 var ArrowTittleCaps =(val)=>{
     
-    let sep=val.split(" ");
+    let sep=val.toLowerCase().split(" ");
     for(let i=0;i<sep.length;i++){
       sep[i]= sep[i].charAt(0).toUpperCase() +sep[i].slice(1);        
     }
     return sep.join(" ");
 };
-console.log("Arrow Function--->"+" "+ArrowTittleCaps("welcome all techies "));
+console.log("Arrow Function--->"+" "+ArrowTittleCaps("wElcome all techies "));
 
 
 //Immediate invoke function expression
@@ -82,8 +82,8 @@ console.log("Arrow Function--->"+" "+ArrowTittleCaps("welcome all techies "));
 
 let IIFEWayFindVal=(function (val){
 
-    let sep=val.split(" ");
-    for(let i=0;i<sep.length;i++){
+  let sep=val.toLowerCase().split(" ");
+  for(let i=0;i<sep.length;i++){
       sep[i]= sep[i].charAt(0).toUpperCase() +sep[i].slice(1);        
     }
     return sep.join(" ");

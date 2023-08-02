@@ -16,7 +16,12 @@ align-items: center;
 text-align: center;
 background-color: #04AA6D;
 color: aliceblue;
+
 }
+#we{
+    font-family:'Gill Sans';
+}
+
 #child2{
 height: 30vh;
 width: 100%;
