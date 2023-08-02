@@ -18,8 +18,8 @@ console.log("---------PALINDROME---------")
 function tradPalindrom(palindrome){
     let palString="";
     let caseCheck=palindrome.toLowerCase();
-    for(let i=palindrome.length-1;i>=0;i--){
-        palString += palindrome.charAt(i); 
+    for(let i=caseCheck.length-1;i>=0;i--){
+        palString += caseCheck.charAt(i); 
     }
     if(palString===palindrome){
         return "valid palindrome";
@@ -28,7 +28,7 @@ function tradPalindrom(palindrome){
     }
 }
 
-console.log(tradPalindrom(pal4));
+console.log("TraditionFunction------>"+" "+tradPalindrom(pal3));
 
 
 //Anonymouse Function
@@ -42,8 +42,8 @@ console.log(tradPalindrom(pal4));
 let anonymPalindrome=function(palindrome){
     let palString="";
     let caseCheck=palindrome.toLowerCase();
-    for(let i=palindrome.length-1;i>=0;i--){
-        palString += palindrome.charAt(i); 
+    for(let i=caseCheck.length-1;i>=0;i--){
+        palString += caseCheck.charAt(i); 
     }
     if(palString===palindrome){
         return "valid palindrome";
@@ -51,7 +51,7 @@ let anonymPalindrome=function(palindrome){
         return "Not an palindrome";
     }    
 }
-console.log(anonymPalindrome(pal3));
+console.log("AnonymouseFunction------>"+""+anonymPalindrome(pal3));
 
 
 //Arrow Function
@@ -59,21 +59,18 @@ console.log(anonymPalindrome(pal3));
 
 /**
  * Here i use traditional functiona method and get parameter from function call
- * and then convert to lower case and reverse the value using iteration and store 
- * then check palindrome. 
+ * and then convert to lower case and reverse the value using default reverse method
+ *  insted of traditional iteration  and store then check palindrome. 
  * @param {pal4} palindrome 
  * @returns 
  */
 //ternary operator used
 let arrowPalindrome=(palindrome)=>{
     let palString="";
-    let caseCheck=palindrome.toLowerCase();
-    for(let i=palindrome.length-1;i>=0;i--){
-        palString += palindrome.charAt(i); 
-    }
+    palString=palindrome.toLowerCase().split("").reverse().join("")
         return (palString===palindrome)?"valid palindrome":"Not an valid Palindrome";    
 }
-console.log(arrowPalindrome(pal3));
+console.log("ArrowFunction-->"+""+arrowPalindrome(pal3));
 
 
 
@@ -92,10 +89,10 @@ console.log(arrowPalindrome(pal3));
 let IifePalin=(function(palindrome){
     let palString="";
     let caseCheck=palindrome.toLowerCase();
-    for(let i=palindrome.length-1;i>=0;i--){
-        palString += palindrome.charAt(i); 
+    for(let i=caseCheck.length-1;i>=0;i--){
+        palString += caseCheck.charAt(i); 
     }
         return (palString===palindrome)?"valid palindrome":"Not an valid Palindrome";    
 })(pal1);
 
-console.log(IifePalin);
+console.log("IIFE------>"+IifePalin);
